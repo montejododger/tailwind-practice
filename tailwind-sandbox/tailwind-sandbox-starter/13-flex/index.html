@@ -1,19 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Flex</title>
-  </head>
-  <body>
-    <!-- Flex and alignment -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>Flex</title>
+    </head>
+    <body>
+        <!-- Flex and alignment -->
 
-    <!-- Flex Column, Gap and Order -->
+        <div
+            class="flex flex-wrap items-center justify-between h-72 w-full bg-gray-100">
+            <div class="p-10 border border-blue-300 bg-blue-100">1</div>
+            <div class="p-10 border border-blue-300 bg-blue-100">2</div>
+            <div class="p-10 border border-blue-300 bg-blue-100">3</div>
+            <div class="p-10 border border-blue-300 bg-blue-100">4</div>
+        </div>
 
-    <!-- Grow and shrink -->
-  </body>
+        <!-- Flex Column, Gap and Order -->
+
+        <div
+            class="flex flex-col gap-4 items-center justify-between h-72 w-full bg-gray-100">
+            <div class="p-10 border border-blue-300 bg-blue-100">1</div>
+            <div class="p-10 border border-blue-300 bg-blue-100">2</div>
+            <div class="p-10 border border-blue-300 bg-blue-100">3</div>
+            <div class="p-10 border border-blue-300 bg-blue-100">4</div>
+        </div>
+
+        <!-- Grow and shrink -->
+    </body>
 </html>
 
 <!-- Justify Content
@@ -25,7 +41,7 @@
       justify-evenly	    justify-content: space-evenly;
     -->
 
-<!-- 
+<!--
       items-start	align-items: flex-start;
       items-end	align-items: flex-end;
       items-center	align-items: center;
@@ -40,22 +56,22 @@
       flex-col-reverse	flex-direction: column-reverse;
     -->
 
-<!-- 
+<!--
       flex-wrap	        flex-wrap: wrap;
       flex-wrap-reverse	flex-wrap: wrap-reverse;
       flex-nowrap	      flex-wrap: nowrap;
      -->
 
 <!-- Flex Properties
-      flex-none	    flex: none;     
+      flex-none	    flex: none;
       Prevent item from growing or shrinking
 
-      flex-initial	flex: 0 1 auto; 
+      flex-initial	flex: 0 1 auto;
       Allow item to shrink but not grow, taking into account its initial size
 
-      flex-auto	    flex: 1 1 auto; 
+      flex-auto	    flex: 1 1 auto;
       Allow item to grow and shrink, taking into account its initial size
 
-      flex-1	      flex: 1 1 0%;   
+      flex-1	      flex: 1 1 0%;
       Allow item to grow and shrink as needed, ignoring its initial size
     -->
