@@ -2,6 +2,14 @@ const input = document.getElementById('link-input');
 const linkForm = document.getElementById('link-form');
 const errMsg = document.getElementById('err-msg');
 
+//Hamburger Menu
+const btn = document.getElementById('menu-btn');
+const menu = document.getElementById('menu');
+
+// Hamburger Menu
+btn.addEventListener('click', navToggle);
+
+// Search Form Submit
 linkForm.addEventListener('submit', formSubmit);
 
 const isValidUrl = urlString => {
@@ -31,4 +39,12 @@ function formSubmit(e) {
         input.classList.remove('border-red');
         alert('Success');
     }
+}
+
+
+
+function navToggle() {
+    btn.classList.toggle('open');
+    menu.classList.toggle('flex');
+    menu.classList.toggle('hidden');
 }
