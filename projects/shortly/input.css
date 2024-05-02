@@ -25,12 +25,13 @@
 .hamburger-top,
 .hamburger-middle,
 .hamburger-bottom {
+    content: '';
     position: absolute;
     width: 24px;
     height: 3px;
     top: 0;
     left: 0;
-    background: #fff;
+    background: #9c9aa6;
     transform: rotate(0);
     transition: all 0.5s;
 }
@@ -45,6 +46,7 @@
 
 .open {
     transform: rotate(90deg);
+    transform: translateY(0px);
 }
 
 .open .hamburger-top {
