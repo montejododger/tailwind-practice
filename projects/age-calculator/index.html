@@ -20,76 +20,104 @@
         <div class="flex items-center justify-center min-h-screen bg-offWhite">
             <!-- Card Container -->
             <div
-                class="flex flex-col m-3 p-6 max-w-2xl rounded-t-2xl rounded-br-3xl bg-white font-sans">
+                class="flex flex-col p-6 rounded-t-2xl rounded-bl-2xl rounded-br-[175px] bg-white min-w-1/2 font-sans">
                 <!--Top Container  -->
-                <div
-                    class="flex justify-start max-w-4xl items-center mb-10 mt-5 pr-10">
-                    <!-- Day Input -->
-                    <div class="flex flex-col">
-                        <span
-                            class="uppercase p-2 font-bold text-gray-400 text-xs text-opacity-100 tracking-widest">
-                            day
-                        </span>
-                        <input
-                            type="text"
-                            name="day"
-                            id="day"
-                            class="p-3 border font-bold border-gray-200 text-lg rounded-md placeholder:font-sans placeholder:font-bold w-1/2 placeholder:uppercase placeholder:text-left"
-                            placeholder="dd"
-                            maxlength="2" />
+                <form id="ageForm" class="">
+                    <div
+                        class="flex w-10/12 justify-items-start items-center mb-10 mt-5">
+                        <!-- Day Input -->
+                        <div class="flex flex-col w-1/3">
+                            <label
+                                class="uppercase p-2 font-bold text-gray-400 text-xs text-opacity-100 tracking-widest">
+                                day
+                            </label>
+                            <input
+                                type="text"
+                                name="day"
+                                id="day"
+                                class="p-3 border font-bold border-gray-200 text-lg rounded-md placeholder:font-sans placeholder:font-bold w-2/3 placeholder:uppercase placeholder:text-left"
+                                placeholder="dd"
+                                min="1"
+                                max="31"
+                                maxlength="2" />
+                        </div>
+
+                        <!-- Month Input -->
+                        <div class="flex flex-col w-1/3">
+                            <label
+                                class="uppercase p-2 font-bold text-gray-400 text-xs text-opacity-100 tracking-widest">
+                                month
+                            </label>
+                            <input
+                                type="text"
+                                name="month"
+                                id="month"
+                                class="p-3 border font-bold border-gray-200 text-lg rounded-md placeholder:font-sans placeholder:font-bold w-2/3 placeholder:uppercase placeholder:text-left"
+                                placeholder="mm"
+                                min="1"
+                                max="12"
+                                maxlength="2" />
+                        </div>
+
+                        <!-- Year Input -->
+                        <div class="flex flex-col w-1/3">
+                            <label
+                                class="uppercase p-2 font-bold text-gray-400 text-xs tracking-widest">
+                                year
+                            </label>
+                            <input
+                                type="text"
+                                name="year"
+                                id="year"
+                                class="p-3 border font-bold border-gray-200 text-xl rounded-md placeholder:font-sans placeholder:font-bold w-2/3 placeholder:uppercase placeholder:text-left"
+                                placeholder="yyyy"
+                                min="0"
+                                maxlength="4" />
+                        </div>
                     </div>
 
-                    <!-- Month Input -->
-                    <div class="flex flex-col">
-                        <span
-                            class="uppercase p-2 font-bold text-gray-400 text-xs tracking-widest">
-                            month
-                        </span>
-                        <input
-                            type="text"
-                            name="month"
-                            id="month"
-                            class="p-3 border font-bold border-gray-200 text-lg rounded-md placeholder:font-sans placeholder:font-bold w-1/2 placeholder:uppercase placeholder:text-left"
-                            placeholder="mm"
-                            maxlength="2" />
+                    <!-- Break -->
+                    <div
+                        class="w-full box-border relative border-b-2 border-gray-300 justify-center mb-10">
+                        <button
+                            id="agebtn"
+                            class="flex absolute bg-purple-500 items-center justify-center rounded-full w-20 h-20 -top-10 md:-right-0">
+                            <img
+                                src="./assets/images/icon-arrow.svg"
+                                alt=""
+                                class="w-8 h-8" />
+                        </button>
                     </div>
-
-                    <!-- Year Input -->
-                    <div class="flex flex-col">
-                        <span
-                            class="uppercase p-2 font-bold text-gray-400 text-xs tracking-widest">
-                            year
-                        </span>
-                        <input
-                            type="text"
-                            name="year"
-                            id="year"
-                            class="p-3 border font-bold border-gray-200 text-xl rounded-md space-y-2 placeholder:font-sans placeholder:font-bold w-1/2 placeholder:uppercase placeholder:text-left"
-                            placeholder="yyyy"
-                            maxlength="4"/>
-                    </div>
-                </div>
-
-                <!-- Break -->
-                <div
-                    class="w-full relative border-b-2 border-gray-300 justify-center space-x-12 pr-6 mb-10">
-                    <button
-                        id="agebtn"
-                        class="flex absolute bg-purple-500 items-center justify-center rounded-full w-20 h-20 -top-10 md:-right-0">
-                        <img
-                            src="./assets/images/icon-arrow.svg"
-                            alt=""
-                            class="w-8 h-8" />
-                    </button>
-                </div>
+                </form>
 
                 <!-- Bottom Section -->
 
                 <div
-                    class="flex flex-col justify-start items-start p-6 rounded-b-6xl mb-6">
-                    <span class="text-6xl font-bold italic"> -- years</span>
-                    <span class="text-6xl font-bold italic"> -- months</span>
-                    <span class="text-6xl font-bold italic"> -- days</span>
+                    class="flex flex-col w-2/3 gap-4 justify-start items-start p-6 mb-6">
+                    <!-- year section -->
+                    <div class="flex">
+                        <!-- Year container -->
+                        <div class="justify-center text-6xl font-bold italic">
+                            <span id="years-nums" class="text-purple-600">- -</span>
+                            <span class="">years</span>
+                        </div>
+                    </div>
+                    <!-- year section -->
+                    <div class="flex">
+                        <!-- Year container -->
+                        <div class="justify-center text-6xl font-bold italic">
+                            <span id="months-nums" class="text-purple-600">- -</span>
+                            <span class="">months</span>
+                        </div>
+                    </div>
+                    <!-- year section -->
+                    <div class="flex">
+                        <!-- Year container -->
+                        <div class="justify-center text-6xl font-bold italic">
+                            <span id="days-nums" class="text-purple-600">- -</span>
+                            <span class="">days</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
